@@ -1,0 +1,34 @@
+.footer {
+    background-color: #495464;
+    color: #F4F4F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    width:100%;
+  }
+  .companyLogo{
+    box-sizing: border-box;
+    display: flex;
+  }
+  .companyLogo h1{
+    margin: 10px 0px 0px 0px;
+    font-size: 2.5rem;
+    font-family: 'Saira Semi Condensed', sans-serif;
+  }
+  .companyLogo img{
+    height: 8vh;
+  }
+  
+  .footerLink a{
+      font-size: 1.4rem;
+      margin-left: 10px;
+      color: #F4F4F2;
+      appearance: none;
+  }
+  @media(max-width:378px){
+    .footer{
+      height: unset;
+    }
+  }
