@@ -1,8 +1,10 @@
-# BloGet
+# BloGet (with Next.js and typescript)
 
 ## Introduction
 
-BloGet fetches the Blogs from server and renders them when the application Loads. Navigating between Blogs is made possible with react routing. 
+BloGet fetches the Blogs from content management system i.e from Contentstack and renders them when the application Loads. Navigating between Blogs is made possible with Next.js daynamic routing. 
+
+This Application stack comprises of node.js ,next.js and typescript. Here Contentstack is used as CMS.
 
 ## Set-up Project
 
@@ -10,7 +12,7 @@ To Setup this project locally follow below mentioned steps:
 
 #### Installation and Run
 
- 1. Installation
+ 1. Installation : you need to have git and node.js in your local machine.
  
    - Clone the Repository
    
@@ -20,67 +22,77 @@ To Setup this project locally follow below mentioned steps:
   - navigate to the root folder and run the following commands to install node modules.
    
   ```
-  npm install
+   npm install
   ```
+  2. Create .env.local file
    
-  2. Run the Project
+   Create .env.local file containing following variables.
+   
+   ```
+   API_KEY = <API_KEY>
+   TOKEN = <TOKEN>
+   ENV = <ENVIRONMENT>
+   ```
+   
+  3. Run the Project
   
   ```
-  npm run start
+   npm run start
   ```
-   The Next.js Application is now Up and Running
-   Open http://localhost:3000 with your browser to see the result.
+  
+   Open http://localhost:3000 in your browser to see the result.
 
 # Routes in the Application
 
   *  ``` / ``` 
-     ![](https://kulsumansari.github.io/webpage-data/bloget-image/Homepage.png)
+     ![](https://kulsumansari.github.io/webpage-data/bloget-image/bloget-homeroute.png)
      
      
-  *  ``` /blogId ```
+  *  ``` /[Id] ```
 
-     /blogId route is renders the blog of specified blogId
-     ![](https://kulsumansari.github.io/webpage-data/bloget-image/Blog-blogId.png)
+     /[Id] route is renders the blog of specified blogId
+     
+     ![](https://kulsumansari.github.io/webpage-data/bloget-image/bloget-blogIdRoute.png)
 
     
- # Folder Structure
+ # Folders
  
  ```bash
+ 
+ Components
+   ├── BlogComponent
+   |     ├── BlogComponent.tsx  
+   |     └── BlogComponent.module.css 
+   ├── BlogTile
+   |     ├── BlogTile.tsx    
+   |     └── BlogTile.module.css 
+   ├── NavBar
+   |     ├── BlogTile.jsx    
+   |     └── BlogTile.module.css 
+   └── Footer
+         ├── Footer.jsx    
+         └── Footer.module.css 
+         
+ pages
+   ├── _app.tsx
+   │   ├── index.tsx
+   └── [Id].tsx
 
-├── Components
-│   ├── BlogComponent
-│   |     ├── BlogComponent.tsx  
-│   |     └── BlogComponent.module.css 
-│   ├── BlogTile
-│   |     ├── BlogTile.tsx    
-│   |     └── BlogTile.module.css 
-│   ├── NavBar
-│   |     ├── BlogTile.jsx    
-│   |     └── BlogTile.module.css 
-│   └── Footer
-│         ├── Footer.jsx    
-│         └── Footer.module.css 
-|
-├── pages
-│   ├── _app.tsx
-│   ├── index.tsx
-|   └── [Id].tsx
-|
-├── utils
-│   ├── interface.ts
-│   └── apiCalls.ts
+ utils
+   ├── interface.ts
+   └── apiCalls.ts
 
-  
+ styles
+   ├── globals.css
+   └── Home.module.css
 ```
 
 # Resources
 
-[React Component & Props](https://reactjs.org/docs/components-and-props.html)
+[Typescript in Next.js](https://nextjs.org/docs/basic-features/typescript)
 
-[React Routing](https://reactrouter.com/web/guides/quick-start)
+[Dynamic Routes](https://nextjs.org/docs/routing/dynamic-routes)
 
-[React Hooks](https://reactjs.org/docs/hooks-overview.html)
+[Environment variables](https://nextjs.org/docs/basic-features/environment-variables)
 
-[React Router API](https://reactrouter.com/web/api/)
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Custom App](https://nextjs.org/docs/advanced-features/custom-app)
