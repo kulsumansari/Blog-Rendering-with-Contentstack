@@ -2,7 +2,7 @@
 
 ## Introduction
 
-BloGet fetches the Blogs from content management system i.e from Contentstack and renders them when the application Loads. Navigating between Blogs is made possible with Next.js daynamic routing. 
+BloGet is a blog rendering application.BloGet fetches the Blogs from content management system i.e from Contentstack and renders them when the application Loads. Navigating between Blogs is made possible with Next.js daynamic routing. 
 
 This Application stack comprises of node.js ,next.js and typescript. Here Contentstack is used as CMS.
 
