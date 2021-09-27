@@ -11,6 +11,9 @@ function MyApp ({ Component, pageProps,navData , footerData}: pageProps ) {
             <title>{navData.companyName}</title>
             <link rel='icon' href={navData.logoImage.src} />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true'/>
+            <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&family=Saira+Semi+Condensed&display=swap" rel="stylesheet"></link>
         </Head>
         <NavBar navData = {navData}/>
         <Component {...pageProps} />
